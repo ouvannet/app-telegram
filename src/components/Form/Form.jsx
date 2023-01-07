@@ -17,10 +17,10 @@ const Form = () =>{
     }, [])
 
     useEffect(() =>{
-        if(!street || !country){
+        if(street || country){
             tg.MainButton.show();
         }else{
-            tg.MainButton.show();
+            tg.MainButton.hide();
         }
     }, [country, street]);
 
