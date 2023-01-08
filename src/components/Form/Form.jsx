@@ -28,7 +28,7 @@ const Form = () =>{
         setCountry(e.target.value)
     }
     const onChangeStreet= (e) =>{
-        setStreen(e.target.value)
+        setStreet(e.target.value)
     }
     const onChangeSubject = (e) =>{
         setSubject(e.target.value)
@@ -37,7 +37,7 @@ const Form = () =>{
         <div className={"form"}>
             <h3>Use form in react</h3>
             <input className={'input'} value={country} onChange={onChangeCountry} type="text" placeholder={'Name'}  />
-            <input className={'input'} value={street} onChange={onChangeStreet} type="number" placeholder={'password'}  />
+            <input className={'input'} value={street} onChange={onChangeStreet} type="text" placeholder={'password'}  />
 
             <select className={'select'} value={subject} onChange={onChangeSubject}>
                 <option value={'physical'}>Male</option>
