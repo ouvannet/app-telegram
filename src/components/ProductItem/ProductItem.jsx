@@ -3,11 +3,13 @@ import Button from "../Button/Button";
 import './ProductItem.css';
 import ProductList from "../ProductList/ProductList";
 
-const ProductItem = (product,className,onAdd) =>{
+const ProductItem = ({product,className,onAdd}) =>{
+    console.log(product.title);
     const onAddHandler=()=>{
         onAdd(product);
     }
     return (
+        
         <div className={'product'+className}>
             <div className={'img'} />
             <div className={'title'}>{product.title}</div>
