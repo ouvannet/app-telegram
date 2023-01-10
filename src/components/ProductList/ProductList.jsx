@@ -2,7 +2,10 @@ import React from "react";
 import { useState } from "react";
 import './ProductList.css';
 import ProductItem from "../ProductItem/ProductItem";
-import {useTelegram} from "../../hooks/useTelegram";
+import { useEffect } from "react";
+import { useCallback } from "react";
+import { useTelegram } from "../../hooks/useTelegram";
+// import {useTelegram} from "../../hooks/useTelegram";
 
 
 const products=[
@@ -34,10 +37,12 @@ const ProductList = () =>{
         }
 
         setAddedItems(newItems)
-
+        console.log(newItems.length>0);
         if(newItems.length==0){
-            tg.MainButton.hide();
+            tg.MainButton.show();
+            alert("hide");
         }else{
+            alert(tg.MainButton.show());
             tg.MainButton.show();
             tg.MainButton.setParams({
                 text: `Add product! ${getTotalPrice(newItems)}`
