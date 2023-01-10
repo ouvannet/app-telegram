@@ -5,7 +5,7 @@ import ProductList from "../ProductList/ProductList";
 
 const ProductItem = ({product,className,onAdd}) =>{
     console.log(product.title);
-    const onAddHandler=()=>{
+    const onAddHandler=(product)=>{
         onAdd(product);
     }
     return (
