@@ -9,7 +9,7 @@ const Header=()=>{
       
     return(
         <div className={'header'}>
-            <Button onClick={onClose}>Click button</Button>
+            <a href="https://thriving-florentine-2ed8c9.netlify.app/form"><Button onClick={onClose}>Click button</Button></a>
             <span className={'username'}>
                 {user?.username}
             </span>
